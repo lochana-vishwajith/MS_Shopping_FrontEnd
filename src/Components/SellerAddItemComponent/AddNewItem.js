@@ -18,6 +18,7 @@ function AddNewItem() {
       .then((res) => {
         console.log(res.data);
         alert("Entered successfully !");
+        window.location = `/sellerhome`;
       })
       .catch((err) => {
         console.log(err);

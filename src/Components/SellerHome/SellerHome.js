@@ -5,8 +5,9 @@ function SellerHome() {
   return (
     <div>
       <Container>
-        <h1 style={{ marginTop: 2 + "%" }}>Seller Home Page</h1>
-
+        <h2 className="createAccText">SELLER HOME PAGE</h2>
+        <hr className="createAccHr" />
+        <br />
         <br />
         <br />
         <br />
@@ -24,7 +25,7 @@ function SellerHome() {
           <br />
         </center>
         <center>
-          <a href="/ViewList">
+          <a href="/ViewItems">
             <Button variant="danger" size="lg">
               View Items
             </Button>{" "}
@@ -32,14 +33,6 @@ function SellerHome() {
           <br />
           <br />
           <br />
-        </center>
-        <center>
-          <a href="/DeleteItem">
-            {" "}
-            <Button variant="danger" size="lg">
-              Delete Item
-            </Button>{" "}
-          </a>
         </center>
       </Container>
     </div>

@@ -22,9 +22,9 @@ import DeliveryHome from "./Components/DeliveryHomeComponent/DeliveryHome";
 
 import SellerHome from "./Components/SellerHome/SellerHome";
 import SellerAddNewItem from "./Components/SellerAddItemComponent/AddNewItem";
-import SellerView from "./Components/SellerView/SellerViewComponent";
+//import SellerView from "./Components/SellerView/SellerViewComponent";
 import SellerDeleteItem from "./Components/SellerDeleteItemComponent/SellerDeleteItem";
-
+import SellerViewItems from "./Components/SellerViewItems/SellerViewItems";
 //////////////////////////
 
 import { initialState, reducer } from "../src/Reducer/UseReducer";
@@ -54,7 +54,8 @@ function App() {
 
             <Route exact path="/sellerhome" component={SellerHome} />
             <Route path="/AddNewItem" component={SellerAddNewItem} />
-            <Route path="/ViewList" component={SellerView} />
+            <Route path="/ViewItems" component={SellerViewItems} />
+            {/* <Route path="/ViewList" component={SellerView} /> */}
             <Route path="/DeleteItem" component={SellerDeleteItem} />
           </Switch>
         </Router>
