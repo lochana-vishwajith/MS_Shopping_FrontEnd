@@ -1,0 +1,164 @@
+#acc-icon {
+  margin-left: 15px;
+}
+#sign-div {
+  margin-left: 30px;
+}
+.cardViewDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  box-sizing: border-box;
+  margin-left: 30px;
+}
+.card {
+  width: 10rem;
+  height: 12rem;
+}
+.cardViewSubHome {
+  margin-top: 10px;
+}
+.itemDesDiv {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  box-sizing: border-box;
+}
+.itemName {
+  font-size: x-large;
+}
+.itemNameSub {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  box-sizing: border-box;
+}
+.itemImage {
+  width: 350px;
+}
+.buttonDiv {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  box-sizing: border-box;
+}
+.itemDescriptionField {
+  height: 200px;
+}
+.AddressDiv {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  box-sizing: border-box;
+}
+.AddressSub1 {
+  margin-left: 65px;
+  margin-right: 20px;
+}
+.AddText {
+  color: #800000;
+}
+.billingHr {
+  background-color: #4d0000;
+  height: 2px;
+}
+.OrderSum {
+  margin-left: 10px;
+  margin-right: 50px;
+}
+.itemImgBuy {
+  width: 60px;
+}
+.orderSumSub11 {
+  display: grid;
+  grid-template-columns: 1fr 8.5fr;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+.loginMainDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+#login {
+  margin-left: 220px;
+  width: 150px;
+}
+.loginText {
+  font-family: "Times New Roman", serif;
+  color: #800000;
+}
+.welcomeText {
+  font-family: "Times New Roman", serif;
+  font-size: 60px;
+  margin-left: 150px;
+}
+.welcomeNote {
+  margin-left: 210px;
+}
+.regText {
+  margin-left: 280px;
+}
+#reg {
+  margin-left: 290px;
+  width: 150px;
+  margin-top: 41px;
+}
+.container {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+.createAccText {
+  color: #800000;
+}
+.createAccHr {
+  background-color: #800000;
+  height: 0.6px;
+}
+#registerBtn {
+  width: 350px;
+  margin-left: 150px;
+  margin-top: 40px;
+}
+.createAccMainDiv {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-sizing: border-box;
+}
+.logoReg {
+  width: 300px;
+  margin-left: 65px;
+}
+.hLogo {
+  width: 50px;
+}
+#hTopic {
+  margin-left: 10px;
+}
+#cartCard {
+  width: 1000px;
+  height: auto;
+}
+#cartDivMain {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  box-sizing: border-box;
+}
+#del {
+  margin-right: 140px;
+}
+#billingSub {
+  margin-left: 210px;
+  margin-top: 20px;
+}
+.PriceTot {
+  display: grid;
+  grid-template-columns: 3.6fr 2fr;
+  box-sizing: border-box;
+}
+.proceedBtn {
+  margin-top: 2px;
+}
+.dilBtnG {
+  display: grid;
+  grid-template-columns: 23fr 2fr;
+  box-sizing: border-box;
+}
