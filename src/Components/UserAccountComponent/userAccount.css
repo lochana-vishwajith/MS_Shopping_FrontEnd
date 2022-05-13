@@ -1,0 +1,14 @@
+.mainContainer{
+    padding-left: 13%;
+    padding-right: 12%;
+}
+.profileName{
+    font-size: x-large;
+    font-weight: bold;
+}
+.lestContainer{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}

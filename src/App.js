@@ -15,6 +15,7 @@ import ItemBuy from "./Components/ItemBuyComponent/itemBuy";
 import LoginCom from "./Components/loginComponent/login";
 import Register from "./Components/RegisterComponent/register";
 import Cart from "./Components/CartComponent/cart";
+import userAccount from "./Components/UserAccountComponent/userAccount";
 //------------IT18014396
 
 import DeliveryHome from "./Components/DeliveryHomeComponent/DeliveryHome";
@@ -55,6 +56,7 @@ function App() {
             <Route exact path="/sellerhome" component={SellerHome} />
             <Route path="/AddNewItem" component={SellerAddNewItem} />
             <Route path="/ViewItems" component={SellerViewItems} />
+            <Route path="/userAccount" component={userAccount} />
             {/* <Route path="/ViewList" component={SellerView} /> */}
             <Route path="/DeleteItem" component={SellerDeleteItem} />
           </Switch>
