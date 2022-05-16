@@ -24,7 +24,7 @@ function Login() {
     };
 
     axios
-      .post(`http://localhost:5000/userDetails/login`, loginDetails)
+      .post(`http://35.202.175.164:5000/userDetails/login`, loginDetails)
       .then((res) => {
         console.log(res.data.id);
         console.log(res.status);

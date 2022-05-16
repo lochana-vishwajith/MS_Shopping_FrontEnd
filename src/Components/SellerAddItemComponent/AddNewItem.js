@@ -14,7 +14,7 @@ function AddNewItem() {
       price,
       description,
     };
-    Axios.post(`http://localhost:5000/itemDetails`, itemDetails)
+    Axios.post(`http://34.124.140.157:5000/itemDetails`, itemDetails)
       .then((res) => {
         console.log(res.data);
         alert("Entered successfully !");

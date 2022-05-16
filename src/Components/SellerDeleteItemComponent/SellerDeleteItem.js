@@ -7,7 +7,7 @@ function SellerDeleteItem() {
 
   function deleteuser(uid) {
     //alert(uid);
-    Axios.delete(`http://localhost:9000/deleteitem/${uid}`)
+    Axios.delete(`http://34.124.140.157:5000/deleteitem/${uid}`)
       .then((res) => {
         alert(uid);
 

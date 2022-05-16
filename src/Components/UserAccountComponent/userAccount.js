@@ -25,7 +25,7 @@ export default class userAccount extends Component {
     this.setState({ userId: id });
 
     await axios
-      .get(`http://localhost:5000/userDetails/userDetails/${id}`)
+      .get(`http://35.202.175.164:5000/userDetails/userDetails/${id}`)
       .then((result) => {
         console.log("result", result);
         this.setState({ userDetails: result.data.customer });
@@ -49,7 +49,7 @@ export default class userAccount extends Component {
     console.log("del");
     const { userId } = this.state;
     await axios
-      .delete(`http://localhost:5000/userDetails/userProfile/${userId}`)
+      .delete(`http://35.202.175.164:5000/userDetails/userProfile/${userId}`)
       .then((result) => {
         console.log(result);
         alert("Delete Successfull");
@@ -68,7 +68,10 @@ export default class userAccount extends Component {
       phone,
     };
     await axios
-      .put(`http://localhost:5000/userDetails/updateProfile/${userId}`, details)
+      .put(
+        `http://35.202.175.164:5000/userDetails/updateProfile/${userId}`,
+        details
+      )
       .then((result) => {
         console.log(result);
         alert("Update Successfull");
