@@ -6,7 +6,7 @@ function SellerViewItems() {
   const [itemData, setItemData] = useState();
   useEffect(() => {
     axios
-      .get("http://localhost:5000/itemDetails/")
+      .get("http://34.124.140.157:5000/itemDetails/")
       .then((res) => {
         console.log(res.data);
         setItemData(res.data);
@@ -19,7 +19,7 @@ function SellerViewItems() {
   const deleteBtn = (id) => {
     console.log(id);
     axios
-      .delete(`http://localhost:5000/itemDetails/${id}`)
+      .delete(`http://34.124.140.157:5000/itemDetails/${id}`)
       .then((res) => {
         alert("Item deleted successfully");
         window.location = `/ViewItems`;
