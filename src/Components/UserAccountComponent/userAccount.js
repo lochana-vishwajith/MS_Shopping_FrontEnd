@@ -4,6 +4,7 @@ import Button from "../ButtonComponent/button";
 import TextInput from "../TextInputComponent/textInputComponent";
 import axios from "axios";
 import "./userAccount.css";
+import { Redirect } from "react-router";
 
 export default class userAccount extends Component {
   constructor(props) {
@@ -15,11 +16,13 @@ export default class userAccount extends Component {
       password: "",
       isEdited: false,
       userDetails: {},
+      userId: "",
     };
   }
 
   async componentDidMount() {
     const id = localStorage.getItem("UserID");
+    this.setState({ userId: id });
 
     await axios
       .get(`http://localhost:5000/userDetails/userDetails/${id}`)
@@ -42,8 +45,38 @@ export default class userAccount extends Component {
     console.log(this.state.isEdited);
   };
 
+  deleteProfile = async (e) => {
+    console.log("del");
+    const { userId } = this.state;
+    await axios
+      .delete(`http://localhost:5000/userDetails/userProfile/${userId}`)
+      .then((result) => {
+        console.log(result);
+        alert("Delete Successfull");
+        this.props.history.push("/register");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   handlerSubmit = async (e) => {
-    this.setState({ isEdited: false });
+    const { fullName, email, phone, userId } = this.state;
+    const details = {
+      fullName,
+      email,
+      phone,
+    };
+    await axios
+      .put(`http://localhost:5000/userDetails/updateProfile/${userId}`, details)
+      .then((result) => {
+        console.log(result);
+        alert("Update Successfull");
+        this.setState({ isEdited: false });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   render() {
     const { userDetails } = this.state;
@@ -62,13 +95,24 @@ export default class userAccount extends Component {
                 <label className="profileName">{userDetails.fullName} </label>
                 <br />
                 {this.state.isEdited ? null : (
-                  <button
-                    type="submit"
-                    class="btn btn-outline-primary"
-                    onClick={this.isEditEnable}
-                  >
-                    Edit Details
-                  </button>
+                  <>
+                    <button
+                      type="submit"
+                      class="btn btn-outline-primary"
+                      onClick={this.isEditEnable}
+                    >
+                      Edit Details
+                    </button>
+                    <br />
+                    <br />
+                    <button
+                      type="submit"
+                      class="btn btn-outline-danger"
+                      onClick={this.deleteProfile}
+                    >
+                      Delete Profile
+                    </button>
+                  </>
                 )}
               </center>
             </div>

@@ -30,6 +30,7 @@ function Login() {
         console.log(res.status);
         localStorage.setItem("UserID", res.data.id);
         if (res.status === 200) {
+          dispatch({ type: "USER", payload: true });
           alert("Login Successfull");
           history.push("/");
         }
