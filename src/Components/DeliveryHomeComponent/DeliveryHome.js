@@ -44,7 +44,7 @@ class DeliveryHome extends Component {
 
   
     axios
-      .get(`http://localhost:5000/locationDetails/${this.state.address}`)
+      .get(`http://34.134.170.172:5000/locationDetails/${this.state.address}`)
       .then((res) => {
         console.log(res.data);
         // this.state.price = res.price;
@@ -95,7 +95,7 @@ class DeliveryHome extends Component {
               </button>
             </div>
             <div>
-              <button type="submit" className="btn btn-primary">
+              <button type="button" className="btn btn-primary">
                 Pay Now
               </button>
             </div>
